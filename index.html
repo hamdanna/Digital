@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Your First Web Page!</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff7fb;
+            color: #34243b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: white;
+            text-align: center;
+            padding: 38px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 28px auto;
+            padding: 0 18px;
+        }
+
+        .welcome, .step, .challenge {
+            background: white;
+            border: 1px solid #f1d5e9;
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 12px #7c2d1210;
+        }
+
+        .welcome {
+            border-left: 6px solid #c084fc;
+        }
+
+        h2 {
+            color: #9333a6;
+            margin-top: 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #f3e8ff;
+            color: #7e22ce;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #9333ea;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7e22ce;
+        }
+
+        pre {
+            background: #241d2b;
+            color: #fce7f3;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+            white-space: pre;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: Consolas, "Courier New", monospace;
+        }
+
+        .tip {
+            background: #fdf2f8;
+            border-left: 4px solid #ec4899;
+            padding: 12px 15px;
+            border-radius: 5px;
+        }
+
+        .challenge {
+            background: #f3e8ff;
+            border-color: #d8b4fe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #6b526e;
+        }
+
+        @media (max-width: 600px) {
+            .welcome, .step, .challenge {
+                padding: 16px;
+            }
+
+            pre {
+                padding: 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>✨ Code Your First Web Page!</h1>
+    <p>Be creative. Try something new. Make it yours!</p>
+</header>
+
+<main>
+
+    <section class="welcome">
+        <h2>Welcome, Future Web Developer! 💻</h2>
+        <p>
+            Ready to turn your ideas into a real website? Follow these steps
+            to build a page about your favorite animal. You will use HTML,
+            CSS, and JavaScript.
+        </p>
+        <p><strong>No account or download is needed.</strong></p>
+    </section>
+
+    <section class="step">
+        <span class="step-number">STEP 1</span>
+        <h2>Open Web Maker 🌐</h2>
+        <p>
+            Open
+            <a href="https://webmaker.app/" target="_blank" rel="noopener noreferrer">
+                Web Maker
+            </a>
+            in a new tab.
+        </p>
+        <p>
+            Find the HTML, CSS, and JavaScript editor panels. Your page preview
+            should appear beside or below the editors.
+        </p>
+        <p class="tip">
+            <strong>Remember:</strong> HTML goes in the HTML panel, CSS goes
+            in the CSS panel, and JavaScript goes in the JavaScript panel.
+        </p>
+    </section>
+
+    <section class="step">
+        <span class="step-number">STEP 2</span>
+        <h2>Add the HTML 🧱</h2>
+        <p>
+            HTML creates the content on your page. Select the starter code in
+            Web Maker's HTML panel, then replace it with this code.
+        </p>
+        <div class="button-row">
+            <strong>HTML code</strong>
+            <button type="button" onclick="copyCode('htmlCode', this)">Copy HTML</button>
+        </div>
+        <pre><code id="htmlCode">&lt;h1&gt;Welcome to My Website!&lt;/h1&gt;
+&lt;p&gt;Hi, I'm your name here and this is my first web page!&lt;/p&gt;
+&lt;h2&gt;My favorite animal is a cat&lt;/h2&gt;
+
+&lt;img src="https://schertzanimalhospital.com/wp-content/uploads/2017/12/Schertz_iStock-590055188-1024x682.jpg" alt="A cute cat"&gt;
+
+&lt;p&gt;I love learning web development because it's fun and creative!&lt;/p&gt;
+&lt;button&gt;Click me to change the background color!&lt;/button&gt;</code></pre>
+        <p class="tip">
+            <strong>Make it yours:</strong> Replace "your name here" with your
+            name. Keep the HTML code in the HTML panel.
+        </p>
+    </section>
+
+    <section class="step">
+        <span class="step-number">STEP 3</span>
+        <h2>Style Your Page 🎨</h2>
+        <p>
+            CSS controls how your page looks, including colors, fonts,
+            image size, and button style. Paste this code into the CSS panel.
+        </p>
+        <div class="button-row">
+            <strong>CSS code</strong>
+            <button type="button" onclick="copyCode('cssCode', this)">Copy CSS</button>
+        </div>
+        <pre><code id="cssCode">body {
+    background-color: lightpink;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: hotpink;
+}
+
+img {
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+}
+
+button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: deeppink;
+}</code></pre>
+        <p class="tip">
+            <strong>Experiment:</strong> Try changing <code>lightpink</code>
+            to <code>lightblue</code> or <code>lavender</code>. What changes?
+        </p>
+    </section>
+
+    <section class="step">
+        <span class="step-number">STEP 4</span>
+        <h2>Make It Interactive ⚡</h2>
+        <p>
+            JavaScript makes your button do something when you click it.
+            Paste this code into the JavaScript panel.
+        </p>
+        <div class="button-row">
+            <strong>JavaScript code</strong>
+            <button type="button" onclick="copyCode('jsCode', this)">Copy JavaScript</button>
+        </div>
+        <pre><code id="jsCode">const button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+    const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 70%)`;
+    document.body.style.backgroundColor = randomColor;
+});</code></pre>
+    </section>
+
+    <section class="step">
+        <span class="step-number">STEP 5</span>
+        <h2>Test Your Website! 🚀</h2>
+        <ol>
+            <li>Look at your live preview.</li>
+            <li>Check that your heading, cat picture, and button appear.</li>
+            <li>Click the button. The background should change color!</li>
+            <li>If something does not work, check that each code section is in the correct panel.</li>
+        </ol>
+    </section>
+
+    <section class="challenge">
+        <h2>🌟 Your Creative Challenge</h2>
+        <p>Now make the page your own!</p>
+        <ul>
+            <li>Change the heading color.</li>
+            <li>Choose a different background color.</li>
+            <li>Change the button text to something fun.</li>
+            <li>Find a picture of your favorite animal and use its image URL.</li>
+        </ul>
+        <p><strong>There is no single right design. Be creative and have fun!</strong></p>
+    </section>
+
+</main>
+
+<footer>
+    Made with curiosity, creativity, and code. 💜
+</footer>
+
+<script>
+    function copyCode(codeId, button) {
+        const code = document.getElementById(codeId).textContent;
+        const originalText = button.textContent;
+
+        navigator.clipboard.writeText(code).then(function() {
+            button.textContent = "Copied!";
+            setTimeout(function() {
+                button.textContent = originalText;
+            }, 1500);
+        }).catch(function() {
+            window.alert(
+                "Automatic copying is not available. Select the code, copy it, and paste it into Web Maker."
+            );
+        });
+    }
+</script>
+
+</body>
+</html>
